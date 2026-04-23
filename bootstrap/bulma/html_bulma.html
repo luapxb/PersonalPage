@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luana Peixoto Borges</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Aplica o tema ANTES de renderizar para evitar piscar -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" id="mainNav">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item brand-logo" href="#">LP</a>
+        <a role="button" class="navbar-burger" id="burgerBtn" data-target="navMenu">
+          <span></span><span></span><span></span><span></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#sobre">Sobre</a>
+          <a class="navbar-item" href="#experiencia">Experiência</a>
+          <a class="navbar-item" href="#interesses">Interesses</a>
+          <a class="navbar-item" href="#contato">Contato</a>
+          <div class="navbar-item">
+            <button class="theme-btn" id="themeToggle">
+              <i class="bi bi-moon-stars" id="themeIcon"></i>
+              <span id="themeLabel">Escuro</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <p class="hero-eyebrow">Portfólio Pessoal</p>
+          <h1 class="hero-name">Luana Peixoto<br>Borges</h1>
+          <p class="hero-sub">Estudante de Análise de Dados apaixonada por transformar dados em insights. Estagiária na área de suporte e participante ativa do Núcleo de Estudos GIRLS.</p>
+          <div class="hero-buttons">
+            <a href="#contato" class="btn-primary-custom"><i class="bi bi-envelope"></i> Entre em contato</a>
+            <a href="#sobre" class="btn-outline-custom"><i class="bi bi-arrow-down"></i> Saiba mais</a>
+          </div>
+        </div>
+        <div class="column is-5 has-text-centered">
+          <div class="hero-avatar">👩‍💻</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="page-section surface-bg">
+    <div class="container">
+      <p class="section-label">Quem sou eu</p>
+      <h2 class="section-title">Sobre mim</h2>
+      <div class="section-divider"></div>
+      <div class="columns is-vcentered">
+        <div class="column is-6 fade-in">
+          <p class="text-muted-var">
+            Olá! Sou a Luana, estudante de <strong class="text-strong">Análise de Dados</strong>, com interesse em transformar informações em decisões inteligentes. Atualmente estou em estágio na área de suporte técnico, onde desenvolvo habilidades de resolução de problemas, comunicação e atendimento.
+          </p>
+          <p class="text-muted-var" style="margin-top: 16px;">
+            Faço parte do <strong class="text-strong">Núcleo de Estudos GIRLS</strong>, um espaço de aprendizado colaborativo e empoderamento feminino na tecnologia. Acredito que diversidade é essencial para a inovação.
+          </p>
+        </div>
+        <div class="column is-6 fade-in">
+          <div class="columns is-multiline">
+            <div class="column is-6"><div class="stat-box"><div class="stat-number">Dados</div><div class="stat-desc">Área de estudos</div></div></div>
+            <div class="column is-6"><div class="stat-box"><div class="stat-number">GIRLS</div><div class="stat-desc">Núcleo de estudos</div></div></div>
+            <div class="column is-6"><div class="stat-box"><div class="stat-number">Suporte</div><div class="stat-desc">Área de estágio</div></div></div>
+            <div class="column is-6"><div class="stat-box"><div class="stat-number">🌍</div><div class="stat-desc">Viajante nas horas vagas</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section id="experiencia" class="page-section">
+    <div class="container">
+      <p class="section-label">Trajetória</p>
+      <h2 class="section-title">Experiência & Formação</h2>
+      <div class="section-divider"></div>
+      <div class="columns">
+        <div class="column is-4 fade-in">
+          <div class="custom-card">
+            <div class="card-icon"><i class="bi bi-briefcase"></i></div>
+            <h5>Estágio em Suporte</h5>
+            <p>Atuação na área de suporte técnico, desenvolvendo habilidades de atendimento ao usuário, resolução de problemas e comunicação eficiente.</p>
+          </div>
+        </div>
+        <div class="column is-4 fade-in">
+          <div class="custom-card">
+            <div class="card-icon"><i class="bi bi-mortarboard"></i></div>
+            <h5>Análise de Dados</h5>
+            <p>Formação focada em transformar conjuntos de dados em informações estratégicas e relevantes para tomada de decisão.</p>
+          </div>
+        </div>
+        <div class="column is-4 fade-in">
+          <div class="custom-card nucleus-card">
+            <h5>Núcleo GIRLS</h5>
+            <p>Participação ativa no núcleo de estudos GIRLS, promovendo a inclusão e o protagonismo feminino na tecnologia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESSES -->
+  <section id="interesses" class="page-section surface-bg">
+    <div class="container">
+      <p class="section-label">Fora do trabalho</p>
+      <h2 class="section-title">Interesses & Hobbies</h2>
+      <div class="section-divider"></div>
+      <div class="fade-in has-text-centered" style="margin-bottom: 40px;">
+        <span class="interest-tag"><i class="bi bi-trophy"></i> Academia</span>
+        <span class="interest-tag"><i class="bi bi-airplane"></i> Viagens</span>
+        <span class="interest-tag"><i class="bi bi-people-fill"></i> Família</span>
+        <span class="interest-tag"><i class="bi bi-bar-chart-line"></i> Análise de Dados</span>
+        <span class="interest-tag"><i class="bi bi-laptop"></i> Tecnologia</span>
+        <span class="interest-tag"><i class="bi bi-gender-female"></i> Empoderamento Feminino</span>
+      </div>
+      <div class="columns">
+        <div class="column is-4 fade-in">
+          <div class="custom-card">
+            <div class="card-icon"><i class="bi bi-trophy"></i></div>
+            <h5>Academia</h5>
+            <p>A prática regular de exercícios é parte da minha rotina. Equilíbrio entre saúde física e mental para uma vida produtiva.</p>
+          </div>
+        </div>
+        <div class="column is-4 fade-in">
+          <div class="custom-card">
+            <div class="card-icon"><i class="bi bi-airplane"></i></div>
+            <h5>Viagens</h5>
+            <p>Explorar novos lugares amplia horizontes. Cada viagem é uma oportunidade de aprendizado e crescimento pessoal.</p>
+          </div>
+        </div>
+        <div class="column is-4 fade-in">
+          <div class="custom-card">
+            <div class="card-icon"><i class="bi bi-house-heart"></i></div>
+            <h5>Família</h5>
+            <p>O tempo de qualidade com a família é essencial. São minha base e maior fonte de motivação no dia a dia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="page-section">
+    <div class="container">
+      <p class="section-label">Vamos conversar</p>
+      <h2 class="section-title">Contato</h2>
+      <div class="section-divider"></div>
+      <div class="columns is-centered">
+        <div class="column is-6 fade-in">
+          <a href="mailto:luanapxb@gmail.com" class="contact-link">
+            <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <div class="contact-label">E-mail</div>
+              <div class="contact-value">luanapxb@gmail.com</div>
+            </div>
+            <i class="bi bi-arrow-right" style="margin-left: auto; color: var(--muted);"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank" class="contact-link">
+            <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">luana-peixoto-borges</div>
+            </div>
+            <i class="bi bi-arrow-right" style="margin-left: auto; color: var(--muted);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 <span>Luana Peixoto Borges</span> · Feito com Bulma CSS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

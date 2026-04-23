@@ -13,21 +13,20 @@ Página pessoal desenvolvida com **HTML**, **CSS** e **JavaScript**, disponível
 ## 📁 Estrutura do Repositório
 personalPage/
 
-├── bootstrap/
 
-│   ├── index.html
+│ index.html
 
-│   ├── style.css
+│ style.css
 
-│   └── script.js
+│  script.js
 
-└── bulma/
+│ bulma/
 
-  ├── index.html
+│ ├── index.html
 
-  ├── style.css
+│ ├── style.css
 
-  └── script.js
+│ └── script.js
 
 
 ## 🛠️ Tecnologias Utilizadas
@@ -47,10 +46,6 @@ personalPage/
 - Animações ao rolar a página
 - Seções: Hero, Sobre, Experiência, Interesses e Contato
 
-## 🔗 Acesse Online
-
-- [Versão Bootstrap](https://luapxb.github.io/personalPage/bootstrap/)
-- [Versão Bulma](https://luapxb.github.io/personalPage/bulma/)
 
 ---
 

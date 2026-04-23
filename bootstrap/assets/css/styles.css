@@ -1,36 +1,120 @@
 /* =============================================
-   FONTE
+   FONTE — diferente do Bulma (Inter)
    ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
 }
 
 /* =============================================
-   COR PRIMÁRIA — ROXO
-   Sobrescreve o azul padrão do Bootstrap
+   COR PRIMÁRIA — VERDE ESMERALDA
+   Sobrescreve o padrão do Bootstrap
    ============================================= */
 :root {
-  --bs-primary: #6f42c1;
-  --bs-primary-rgb: 111, 66, 193;
-  --bs-link-color: #6f42c1;
-  --bs-link-hover-color: #59359a;
+  --bs-primary: #1b4332;
+  --bs-primary-rgb: 27, 67, 50;
+  --bs-link-color: #2d6a4f;
+  --bs-link-hover-color: #1b4332;
+
+  /* extras */
+  --accent: #1b4332;
+  --accent2: #40916c;
+  --accent-light: #d8f3dc;
 }
 
-.text-primary         { color: #6f42c1 !important; }
-.bg-primary           { background-color: #6f42c1 !important; }
-.btn-primary          { background-color: #6f42c1; border-color: #6f42c1; }
-.btn-primary:hover    { background-color: #59359a; border-color: #59359a; }
-.btn-outline-primary  { color: #6f42c1; border-color: #6f42c1; }
-.btn-outline-primary:hover { background-color: #6f42c1; color: #fff; }
-.text-bg-primary      { background-color: #6f42c1 !important; color: #fff !important; }
-.progress-bar.bg-primary { background-color: #6f42c1 !important; }
-.badge.text-bg-primary   { background-color: #6f42c1 !important; color: #fff !important; }
+.text-primary         { color: var(--accent2) !important; }
+.bg-primary           { background-color: var(--accent) !important; }
+.btn-primary          { background-color: var(--accent2); border-color: var(--accent2); color: #fff; }
+.btn-primary:hover    { background-color: var(--accent); border-color: var(--accent); }
+.btn-outline-primary  { color: var(--accent2); border-color: var(--accent2); }
+.btn-outline-primary:hover { background-color: var(--accent2); color: #fff; }
+.text-bg-primary      { background-color: var(--accent2) !important; color: #fff !important; }
+.progress-bar.bg-primary  { background-color: var(--accent2) !important; }
+.badge.text-bg-primary    { background-color: var(--accent2) !important; color: #fff !important; }
+
+/* =============================================
+   BODY — fundo levemente creme
+   ============================================= */
+body {
+  background-color: #f5f3ef;
+  color: #1a1a1a;
+}
+
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] {
+  background-color: #0f1c16 !important;
+  color: #e8e4dc !important;
+}
 
 /* =============================================
    NAVBAR
    ============================================= */
 .navbar {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  background-color: rgba(245, 243, 239, 0.95) !important;
+  border-bottom: 1px solid #e0ddd7;
+}
+
+[data-bs-theme="dark"] .navbar {
+  background-color: rgba(15, 28, 22, 0.95) !important;
+  border-bottom-color: #1f3329 !important;
+}
+
+.navbar-brand {
+  color: var(--accent) !important;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* =============================================
+   HEADER — fundo verde escuro em vez de branco
+   ============================================= */
+header#top {
+  background-color: var(--accent) !important;
+  color: #e8e4dc;
+  padding-top: 80px !important;
+}
+
+header#top h1,
+header#top .display-5 {
+  color: #ffffff !important;
+  font-family: 'Playfair Display', serif;
+}
+
+header#top .lead,
+header#top .text-secondary {
+  color: rgba(232, 228, 220, 0.7) !important;
+}
+
+header#top .text-primary {
+  color: #74c69d !important;
+}
+
+header#top .card {
+  background-color: rgba(255,255,255,0.07) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  color: #e8e4dc;
+}
+
+header#top .card h6 {
+  color: #74c69d !important;
+}
+
+header#top .card p {
+  color: rgba(232,228,220,0.75) !important;
 }
 
 /* =============================================
@@ -41,7 +125,7 @@ body {
   height: 160px;
   border-radius: 999px;
   object-fit: cover;
-  border: 4px solid rgba(111, 66, 193, 0.35);
+  border: 4px solid rgba(116, 198, 157, 0.5);
   display: block;
   margin: 0 auto;
 }
@@ -54,32 +138,85 @@ section {
 }
 
 /* =============================================
-   CARDS — hover suave
+   SEÇÕES — fundo alternado
+   ============================================= */
+#sobre    { background-color: #f5f3ef; }
+#habilidades { background-color: #ffffff; }
+#interesses  { background-color: #f5f3ef; }
+#contato     { background-color: #ffffff; }
+
+[data-bs-theme="dark"] #sobre       { background-color: #0f1c16; }
+[data-bs-theme="dark"] #habilidades { background-color: #162820; }
+[data-bs-theme="dark"] #interesses  { background-color: #0f1c16; }
+[data-bs-theme="dark"] #contato     { background-color: #162820; }
+
+/* =============================================
+   CARDS — hover verde
    ============================================= */
 .card {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px !important;
 }
+
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(111, 66, 193, 0.1) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(27, 67, 50, 0.12) !important;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #162820 !important;
+  border-color: #1f3329 !important;
 }
 
 /* =============================================
-   PROGRESS BAR — arredondada
+   BADGES
+   ============================================= */
+.badge.text-bg-secondary {
+  background-color: #2d6a4f !important;
+  color: #d8f3dc !important;
+}
+
+.badge.text-bg-light {
+  background-color: var(--accent-light) !important;
+  color: var(--accent) !important;
+  font-weight: 500;
+  border: 1px solid rgba(27,67,50,0.15);
+}
+
+[data-bs-theme="dark"] .badge.text-bg-light {
+  background-color: #1b4332 !important;
+  color: #74c69d !important;
+  border-color: #2d6a4f !important;
+}
+
+/* =============================================
+   PROGRESS BAR — arredondada e verde
    ============================================= */
 .progress {
   border-radius: 99px;
+  background-color: #e0ddd7;
 }
+
 .progress-bar {
   border-radius: 99px;
+  background-color: var(--accent2) !important;
+}
+
+[data-bs-theme="dark"] .progress {
+  background-color: #1f3329;
 }
 
 /* =============================================
-   BADGES — borda no tema claro
+   BOTÕES DO HEADER
    ============================================= */
-.badge.text-bg-light {
-  color: #333 !important;
-  font-weight: 500;
+header#top .btn-outline-secondary {
+  color: rgba(232,228,220,0.8) !important;
+  border-color: rgba(232,228,220,0.3) !important;
+}
+
+header#top .btn-outline-secondary:hover {
+  background-color: rgba(232,228,220,0.1) !important;
+  color: #fff !important;
 }
 
 /* =============================================
@@ -87,4 +224,33 @@ section {
    ============================================= */
 footer {
   font-size: 0.875rem;
+  background-color: var(--accent) !important;
+  color: rgba(232,228,220,0.55) !important;
+  border-top: none !important;
+}
+
+[data-bs-theme="dark"] footer {
+  background-color: #090f0a !important;
+}
+
+footer .text-secondary {
+  color: rgba(232,228,220,0.55) !important;
+}
+
+/* =============================================
+   LINKS DE CONTATO
+   ============================================= */
+#contato a {
+  color: var(--accent2);
+}
+
+#contato a:hover {
+  color: var(--accent);
+}
+
+/* =============================================
+   SEÇÃO TÍTULOS
+   ============================================= */
+.h4 {
+  font-family: 'Playfair Display', serif;
 }

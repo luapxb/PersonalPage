@@ -1,5 +1,5 @@
 /* =============================================
-   VARIÁVEIS DE TEMA
+   VARIÁVEIS DE TEMA — CLARO
    ============================================= */
 :root {
   --bg: #f5f3ef;
@@ -14,9 +14,12 @@
   --hero-text: #ffffff;
   --tag-bg: #d8f3dc;
   --tag-text: #1b4332;
-  --nav-bg: rgba(245, 243, 239, 0.95);
+  --nav-bg: rgba(245, 243, 239, 0.97);
 }
 
+/* =============================================
+   VARIÁVEIS DE TEMA — ESCURO
+   ============================================= */
 [data-theme="dark"] {
   --bg: #0f1c16;
   --surface: #162820;
@@ -30,14 +33,15 @@
   --hero-text: #e8e4dc;
   --tag-bg: #1b4332;
   --tag-text: #74c69d;
-  --nav-bg: rgba(15, 28, 22, 0.95);
+  --nav-bg: rgba(15, 28, 22, 0.97);
 }
 
 /* =============================================
    BASE
    ============================================= */
-* {
+*, *::before, *::after {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 body {
@@ -45,6 +49,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-weight: 400;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -58,6 +63,12 @@ h1, h2, h3, h4, h5 {
   background-color: var(--nav-bg) !important;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Navbar some ao rolar para baixo e volta ao rolar para cima */
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar-brand {
@@ -97,6 +108,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 #themeToggle:hover {
@@ -153,7 +165,7 @@ h1, h2, h3, h4, h5 {
   color: var(--hero-text);
 }
 
-.hero p {
+.hero > .container p {
   font-size: 1.05rem;
   color: rgba(232, 228, 220, 0.75);
   max-width: 500px;
@@ -218,6 +230,7 @@ h1, h2, h3, h4, h5 {
    ============================================= */
 section {
   padding: 80px 0;
+  scroll-margin-top: 70px;
 }
 
 .surface-section {
@@ -300,7 +313,6 @@ section {
   margin: 0;
 }
 
-/* NUCLEUS CARD */
 .nucleus-card {
   background: linear-gradient(135deg, #1b4332, #2d6a4f) !important;
   border: none !important;
@@ -318,13 +330,8 @@ section {
   color: white;
 }
 
-.nucleus-card h5 {
-  color: white !important;
-}
-
-.nucleus-card p {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
+.nucleus-card h5 { color: white !important; }
+.nucleus-card p  { color: rgba(255, 255, 255, 0.75) !important; }
 
 /* =============================================
    INTERESSES
@@ -409,15 +416,8 @@ section {
   flex-shrink: 0;
 }
 
-.contact-link .label {
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
-.contact-link .value {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
+.contact-link .label { font-size: 0.75rem; color: var(--muted); }
+.contact-link .value { font-size: 0.9rem; font-weight: 500; }
 
 /* =============================================
    FOOTER
@@ -430,9 +430,7 @@ footer {
   font-size: 0.85rem;
 }
 
-footer span {
-  color: var(--accent2);
-}
+footer span { color: var(--accent2); }
 
 /* =============================================
    ANIMAÇÕES

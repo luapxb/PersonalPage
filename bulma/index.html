@@ -4,39 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luana Peixoto Borges</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="style.css" />
 
-  <!-- Aplica o tema ANTES de renderizar para evitar piscar -->
-  <script>
-    (function () {
-      const saved = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', saved);
-    })();
-  </script>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" role="navigation" id="mainNav">
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar is-sticky-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item brand-logo" href="#">LP</a>
-        <a role="button" class="navbar-burger" id="burgerBtn" data-target="navMenu">
-          <span></span><span></span><span></span><span></span>
+        <a class="navbar-item brand-logo" href="#top">
+          <span class="icon text-primary mr-2"><i class="fa-solid fa-code"></i></span>
+          <strong>Luana Borges</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
-      <div class="navbar-menu" id="navMenu">
+
+      <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item" href="#sobre">Sobre</a>
-          <a class="navbar-item" href="#experiencia">Experiência</a>
+          <a class="navbar-item" href="#habilidades">Habilidades</a>
           <a class="navbar-item" href="#interesses">Interesses</a>
           <a class="navbar-item" href="#contato">Contato</a>
           <div class="navbar-item">
-            <button class="theme-btn" id="themeToggle">
-              <i class="bi bi-moon-stars" id="themeIcon"></i>
+            <button id="themeToggle" class="button is-small is-light">
+              <span class="icon"><i class="fa-solid fa-moon" id="themeIcon"></i></span>
               <span id="themeLabel">Escuro</span>
             </button>
           </div>
@@ -45,158 +51,262 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero-section">
+  <!-- ========== HEADER ========== -->
+  <section id="top" class="section pt-6 pb-5">
     <div class="container">
-      <div class="columns is-vcentered">
-        <div class="column is-7">
-          <p class="hero-eyebrow">Portfólio Pessoal</p>
-          <h1 class="hero-name">Luana Peixoto<br>Borges</h1>
-          <p class="hero-sub">Estudante de Análise de Dados apaixonada por transformar dados em insights. Estagiária na área de suporte e participante ativa do Núcleo de Estudos GIRLS.</p>
-          <div class="hero-buttons">
-            <a href="#contato" class="btn-primary-custom"><i class="bi bi-envelope"></i> Entre em contato</a>
-            <a href="#sobre" class="btn-outline-custom"><i class="bi bi-arrow-down"></i> Saiba mais</a>
+      <div class="columns is-vcentered is-variable is-6">
+
+        <!-- Foto -->
+        <div class="column is-narrow has-text-centered">
+          <img
+            src="foto.jpg"
+            alt="Foto de Luana Peixoto Borges"
+            class="profile-img"
+            onerror="this.outerHTML='<div class=\'profile-img placeholder-img\'><span class=\'icon is-large\'><i class=\'fa-solid fa-user fa-3x\'></i></span></div>'"
+          />
+          <div class="mt-3">
+            <span class="tag is-primary mr-1">Análise de Dados</span>
+            <span class="tag is-light">UFLA</span>
           </div>
         </div>
-        <div class="column is-5 has-text-centered">
-          <div class="hero-avatar">👩‍💻</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="page-section surface-bg">
-    <div class="container">
-      <p class="section-label">Quem sou eu</p>
-      <h2 class="section-title">Sobre mim</h2>
-      <div class="section-divider"></div>
-      <div class="columns is-vcentered">
-        <div class="column is-6 fade-in">
-          <p class="text-muted-var">
-            Olá! Sou a Luana, estudante de <strong class="text-strong">Análise de Dados</strong>, com interesse em transformar informações em decisões inteligentes. Atualmente estou em estágio na área de suporte técnico, onde desenvolvo habilidades de resolução de problemas, comunicação e atendimento.
+        <!-- Texto -->
+        <div class="column">
+          <h1 class="title is-2 mb-2">
+            Olá! Eu sou <span class="text-primary">Luana Peixoto Borges</span>
+          </h1>
+          <p class="subtitle is-5 mb-4">
+            Estudante de Análise de Dados, estagiária na área de suporte e participante do Núcleo de Estudos GIRLS.
           </p>
-          <p class="text-muted-var" style="margin-top: 16px;">
-            Faço parte do <strong class="text-strong">Núcleo de Estudos GIRLS</strong>, um espaço de aprendizado colaborativo e empoderamento feminino na tecnologia. Acredito que diversidade é essencial para a inovação.
-          </p>
-        </div>
-        <div class="column is-6 fade-in">
-          <div class="columns is-multiline">
-            <div class="column is-6"><div class="stat-box"><div class="stat-number">Dados</div><div class="stat-desc">Área de estudos</div></div></div>
-            <div class="column is-6"><div class="stat-box"><div class="stat-number">GIRLS</div><div class="stat-desc">Núcleo de estudos</div></div></div>
-            <div class="column is-6"><div class="stat-box"><div class="stat-number">Suporte</div><div class="stat-desc">Área de estágio</div></div></div>
-            <div class="column is-6"><div class="stat-box"><div class="stat-number">🌍</div><div class="stat-desc">Viajante nas horas vagas</div></div></div>
+          <div class="buttons mb-5">
+            <a href="#contato" class="button is-primary is-small">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <span>Contato</span>
+            </a>
+            <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank" class="button is-light is-small">
+              <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+              <span>LinkedIn</span>
+            </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- EXPERIÊNCIA -->
-  <section id="experiencia" class="page-section">
-    <div class="container">
-      <p class="section-label">Trajetória</p>
-      <h2 class="section-title">Experiência & Formação</h2>
-      <div class="section-divider"></div>
-      <div class="columns">
-        <div class="column is-4 fade-in">
-          <div class="custom-card">
-            <div class="card-icon"><i class="bi bi-briefcase"></i></div>
-            <h5>Estágio em Suporte</h5>
-            <p>Atuação na área de suporte técnico, desenvolvendo habilidades de atendimento ao usuário, resolução de problemas e comunicação eficiente.</p>
-          </div>
-        </div>
-        <div class="column is-4 fade-in">
-          <div class="custom-card">
-            <div class="card-icon"><i class="bi bi-mortarboard"></i></div>
-            <h5>Análise de Dados</h5>
-            <p>Formação focada em transformar conjuntos de dados em informações estratégicas e relevantes para tomada de decisão.</p>
-          </div>
-        </div>
-        <div class="column is-4 fade-in">
-          <div class="custom-card nucleus-card">
-            <h5>Núcleo GIRLS</h5>
-            <p>Participação ativa no núcleo de estudos GIRLS, promovendo a inclusão e o protagonismo feminino na tecnologia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERESSES -->
-  <section id="interesses" class="page-section surface-bg">
-    <div class="container">
-      <p class="section-label">Fora do trabalho</p>
-      <h2 class="section-title">Interesses & Hobbies</h2>
-      <div class="section-divider"></div>
-      <div class="fade-in has-text-centered" style="margin-bottom: 40px;">
-        <span class="interest-tag"><i class="bi bi-trophy"></i> Academia</span>
-        <span class="interest-tag"><i class="bi bi-airplane"></i> Viagens</span>
-        <span class="interest-tag"><i class="bi bi-people-fill"></i> Família</span>
-        <span class="interest-tag"><i class="bi bi-bar-chart-line"></i> Análise de Dados</span>
-        <span class="interest-tag"><i class="bi bi-laptop"></i> Tecnologia</span>
-        <span class="interest-tag"><i class="bi bi-gender-female"></i> Empoderamento Feminino</span>
-      </div>
-      <div class="columns">
-        <div class="column is-4 fade-in">
-          <div class="custom-card">
-            <div class="card-icon"><i class="bi bi-trophy"></i></div>
-            <h5>Academia</h5>
-            <p>A prática regular de exercícios é parte da minha rotina. Equilíbrio entre saúde física e mental para uma vida produtiva.</p>
-          </div>
-        </div>
-        <div class="column is-4 fade-in">
-          <div class="custom-card">
-            <div class="card-icon"><i class="bi bi-airplane"></i></div>
-            <h5>Viagens</h5>
-            <p>Explorar novos lugares amplia horizontes. Cada viagem é uma oportunidade de aprendizado e crescimento pessoal.</p>
-          </div>
-        </div>
-        <div class="column is-4 fade-in">
-          <div class="custom-card">
-            <div class="card-icon"><i class="bi bi-house-heart"></i></div>
-            <h5>Família</h5>
-            <p>O tempo de qualidade com a família é essencial. São minha base e maior fonte de motivação no dia a dia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="page-section">
-    <div class="container">
-      <p class="section-label">Vamos conversar</p>
-      <h2 class="section-title">Contato</h2>
-      <div class="section-divider"></div>
-      <div class="columns is-centered">
-        <div class="column is-6 fade-in">
-          <a href="mailto:luanapxb@gmail.com" class="contact-link">
-            <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
-            <div>
-              <div class="contact-label">E-mail</div>
-              <div class="contact-value">luanapxb@gmail.com</div>
+          <div class="columns is-variable is-3">
+            <div class="column">
+              <div class="card">
+                <div class="card-content p-4">
+                  <p class="is-size-7 text-primary mb-1 has-text-weight-semibold">
+                    <i class="fa-solid fa-graduation-cap mr-1"></i>Curso
+                  </p>
+                  <p class="is-size-7">Análise de Dados — UFLA</p>
+                </div>
+              </div>
             </div>
-            <i class="bi bi-arrow-right" style="margin-left: auto; color: var(--muted);"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank" class="contact-link">
-            <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
-            <div>
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-value">luana-peixoto-borges</div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content p-4">
+                  <p class="is-size-7 text-primary mb-1 has-text-weight-semibold">
+                    <i class="fa-solid fa-bullseye mr-1"></i>Objetivo
+                  </p>
+                  <p class="is-size-7">Transformar dados em decisões inteligentes e contribuir com projetos de impacto.</p>
+                </div>
+              </div>
             </div>
-            <i class="bi bi-arrow-right" style="margin-left: auto; color: var(--muted);"></i>
-          </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2026 <span>Luana Peixoto Borges</span> · Feito com Bulma CSS</p>
+  <main>
+
+    <!-- ========== SOBRE ========== -->
+    <section id="sobre" class="section py-5">
+      <div class="container">
+        <h2 class="title is-4 mb-1">Sobre</h2>
+        <p class="subtitle is-6 mb-4">Uma breve descrição sobre mim.</p>
+
+        <div class="columns is-variable is-5">
+          <div class="column is-7">
+            <div class="card">
+              <div class="card-content">
+                <p class="mb-3">
+                  Olá! Sou a Luana, estudante de Análise de Dados apaixonada por transformar informações em decisões inteligentes.
+                  Atualmente estou em estágio na área de suporte técnico, desenvolvendo habilidades de atendimento e resolução de problemas.
+                </p>
+                <p class="has-text-grey">
+                  Faço parte do Núcleo de Estudos GIRLS, onde acredito no poder da diversidade e do protagonismo feminino na tecnologia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-5">
+            <div class="card">
+              <div class="card-content">
+                <p class="has-text-weight-semibold mb-3">Informações rápidas</p>
+                <div class="is-flex is-align-items-center mb-3">
+                  <span class="icon text-primary mr-2"><i class="fa-solid fa-location-dot"></i></span>
+                  <span><strong>Cidade:</strong> Lavras/MG</span>
+                </div>
+                <div class="is-flex is-align-items-center mb-3">
+                  <span class="icon text-primary mr-2"><i class="fa-solid fa-briefcase"></i></span>
+                  <span><strong>Estágio:</strong> Suporte Técnico</span>
+                </div>
+                <div class="is-flex is-align-items-center">
+                  <span class="icon text-primary mr-2"><i class="fa-solid fa-users"></i></span>
+                  <span><strong>Núcleo:</strong> GIRLS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HABILIDADES ========== -->
+    <section id="habilidades" class="section py-5">
+      <div class="container">
+        <h2 class="title is-4 mb-1">Habilidades</h2>
+        <p class="subtitle is-6 mb-4">Tecnologias e competências.</p>
+
+        <div class="columns is-variable is-5">
+          <div class="column is-6">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="has-text-weight-semibold mb-3">Tecnologias</p>
+                <div class="tags mb-4">
+                  <span class="tag is-primary">Excel</span>
+                  <span class="tag is-primary">Power BI</span>
+                  <span class="tag is-primary">SQL</span>
+                  <span class="tag is-primary">Python</span>
+                  <span class="tag is-light">HTML</span>
+                  <span class="tag is-light">CSS</span>
+                </div>
+                <p class="has-text-weight-semibold mb-2">Competências</p>
+                <ul class="is-size-7">
+                  <li>Análise e visualização de dados</li>
+                  <li>Suporte técnico ao usuário</li>
+                  <li>Comunicação e trabalho em equipe</li>
+                  <li>Resolução de problemas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="has-text-weight-semibold mb-4">Nível de familiaridade</p>
+
+                <div class="mb-4">
+                  <div class="is-flex is-justify-content-space-between is-size-7 mb-1">
+                    <span>Excel / Planilhas</span><span class="has-text-grey">Intermediário</span>
+                  </div>
+                  <progress class="progress is-primary is-small" value="70" max="100">70%</progress>
+                </div>
+
+                <div class="mb-4">
+                  <div class="is-flex is-justify-content-space-between is-size-7 mb-1">
+                    <span>SQL</span><span class="has-text-grey">Básico-Intermediário</span>
+                  </div>
+                  <progress class="progress is-primary is-small" value="50" max="100">50%</progress>
+                </div>
+
+                <div class="mb-4">
+                  <div class="is-flex is-justify-content-space-between is-size-7 mb-1">
+                    <span>Python</span><span class="has-text-grey">Básico</span>
+                  </div>
+                  <progress class="progress is-primary is-small" value="35" max="100">35%</progress>
+                </div>
+
+                <div>
+                  <div class="is-flex is-justify-content-space-between is-size-7 mb-1">
+                    <span>Power BI</span><span class="has-text-grey">Básico</span>
+                  </div>
+                  <progress class="progress is-primary is-small" value="30" max="100">30%</progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTERESSES ========== -->
+    <section id="interesses" class="section py-5">
+      <div class="container">
+        <h2 class="title is-4 mb-1">Interesses</h2>
+        <p class="subtitle is-6 mb-4">Áreas de interesse e hobbies.</p>
+
+        <div class="columns is-variable is-5">
+          <div class="column is-6">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="has-text-weight-semibold mb-3">Áreas de interesse</p>
+                <ul>
+                  <li>Análise e visualização de dados</li>
+                  <li>Inteligência artificial e machine learning</li>
+                  <li>Tecnologia e inovação</li>
+                  <li>Empoderamento feminino na tecnologia</li>
+                  <li>Suporte e experiência do usuário</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="has-text-weight-semibold mb-1">Hobbies &amp; Atividades</p>
+                <p class="is-size-7 has-text-grey mb-3">O que faço fora dos estudos.</p>
+                <div class="tags">
+                  <span class="tag is-light"><i class="fa-solid fa-dumbbell mr-1"></i>Academia</span>
+                  <span class="tag is-light"><i class="fa-solid fa-plane mr-1"></i>Viagens</span>
+                  <span class="tag is-light"><i class="fa-solid fa-people-group mr-1"></i>Família</span>
+                  <span class="tag is-light"><i class="fa-solid fa-venus mr-1"></i>Núcleo GIRLS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contato" class="section py-5">
+      <div class="container">
+        <h2 class="title is-4 mb-1">Contato</h2>
+        <p class="subtitle is-6 mb-4">Como falar comigo.</p>
+
+        <div class="columns">
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-content">
+                <div class="is-flex is-align-items-center mb-4">
+                  <span class="icon text-primary mr-3"><i class="fa-solid fa-envelope"></i></span>
+                  <a href="mailto:luanapxb@gmail.com">luanapxb@gmail.com</a>
+                </div>
+                <div class="is-flex is-align-items-center">
+                  <span class="icon text-primary mr-3"><i class="fa-brands fa-linkedin"></i></span>
+                  <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank">
+                    linkedin.com/in/luana-peixoto-borges
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer py-4 mt-5">
+    <div class="container is-flex is-flex-direction-column is-flex-direction-row-tablet is-justify-content-space-between">
+      <small class="has-text-grey">© <span id="year"></span> Página Pessoal — Luana Peixoto Borges</small>
+      <small class="has-text-grey">Feito com HTML + Bulma + CSS/JS</small>
+    </div>
   </footer>
 
+  <!-- JS próprio -->
   <script src="script.js"></script>
 </body>
 </html>

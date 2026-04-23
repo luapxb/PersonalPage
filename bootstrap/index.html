@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luana Peixoto Borges</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#top">
+        <i class="fa-solid fa-code me-2 text-primary"></i>Luana Borges
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto gap-lg-1 align-items-lg-center py-2 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#interesses">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="themeToggle" class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-1">
+              <i class="fa-solid fa-moon" id="themeIcon"></i>
+              <span id="themeLabel">Tema</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HEADER / INFORMAÇÕES BÁSICAS ========== -->
+  <header id="top" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+
+        <!-- Foto de perfil -->
+        <div class="col-12 col-lg-3 text-center">
+          <img
+            src="assets/img/foto.jpg"
+            alt="Foto de Luana Peixoto Borges"
+            class="profile-img mb-3"
+            onerror="this.outerHTML='<div class=\'profile-img d-flex align-items-center justify-content-center bg-secondary-subtle mx-auto mb-3\'><i class=\'fa-solid fa-user fa-4x text-secondary\'></i></div>'"
+          />
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <span class="badge text-bg-primary">Análise de Dados</span>
+            <span class="badge text-bg-secondary">UFLA</span>
+          </div>
+        </div>
+
+        <!-- Texto principal -->
+        <div class="col-12 col-lg-9">
+          <h1 class="display-5 fw-bold mb-1">
+            Olá! Eu sou <span class="text-primary">Luana Peixoto Borges</span>
+          </h1>
+          <p class="lead text-secondary mb-3">
+            Estudante de Análise de Dados, estagiária na área de suporte e participante do Núcleo de Estudos GIRLS.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="#contato" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-envelope me-1"></i>Contato
+            </a>
+            <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank" class="btn btn-outline-secondary btn-sm">
+              <i class="fa-brands fa-linkedin me-1"></i>LinkedIn
+            </a>
+          </div>
+
+          <!-- Cards de info rápida -->
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="card shadow-sm h-100">
+                <div class="card-body">
+                  <h6 class="text-primary mb-1"><i class="fa-solid fa-graduation-cap me-1"></i>Curso</h6>
+                  <p class="mb-0 small">Análise de Dados — UFLA</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card shadow-sm h-100">
+                <div class="card-body">
+                  <h6 class="text-primary mb-1"><i class="fa-solid fa-bullseye me-1"></i>Objetivo</h6>
+                  <p class="mb-0 small">Transformar dados em decisões inteligentes e contribuir com projetos de impacto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-5">
+
+    <!-- ========== SOBRE ========== -->
+    <section id="sobre" class="py-4">
+      <div class="container">
+        <div class="mb-3">
+          <h2 class="h4 mb-1">Sobre</h2>
+          <p class="text-secondary mb-0">Uma breve descrição sobre mim.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-7">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="mb-2">
+                  Olá! Sou a Luana, estudante de Análise de Dados apaixonada por transformar informações em decisões inteligentes.
+                  Atualmente estou em estágio na área de suporte técnico, desenvolvendo habilidades de atendimento e resolução de problemas.
+                </p>
+                <p class="text-secondary mb-0">
+                  Faço parte do Núcleo de Estudos GIRLS, onde acredito no poder da diversidade e do protagonismo feminino na tecnologia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h3 class="h6 mb-3">Informações rápidas</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex gap-2 mb-2">
+                    <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                    <div><strong>Cidade:</strong> Lavras/MG</div>
+                  </li>
+                  <li class="d-flex gap-2 mb-2">
+                    <i class="fa-solid fa-briefcase text-primary mt-1"></i>
+                    <div><strong>Estágio:</strong> Suporte Técnico</div>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="fa-solid fa-users text-primary mt-1"></i>
+                    <div><strong>Núcleo:</strong> GIRLS</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HABILIDADES ========== -->
+    <section id="habilidades" class="py-4">
+      <div class="container">
+        <div class="mb-3">
+          <h2 class="h4 mb-1">Habilidades</h2>
+          <p class="text-secondary mb-0">Tecnologias e competências.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="h6 mb-3">Tecnologias</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge text-bg-primary">Excel</span>
+                  <span class="badge text-bg-primary">Power BI</span>
+                  <span class="badge text-bg-primary">SQL</span>
+                  <span class="badge text-bg-primary">Python</span>
+                  <span class="badge text-bg-secondary">HTML</span>
+                  <span class="badge text-bg-secondary">CSS</span>
+                </div>
+                <h3 class="h6 mb-2">Competências</h3>
+                <ul class="small mb-0">
+                  <li>Análise e visualização de dados</li>
+                  <li>Suporte técnico ao usuário</li>
+                  <li>Comunicação e trabalho em equipe</li>
+                  <li>Resolução de problemas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="h6 mb-3">Nível de familiaridade</h3>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>Excel / Planilhas</span>
+                    <span class="text-secondary">Intermediário</span>
+                  </div>
+                  <div class="progress" style="height:8px;">
+                    <div class="progress-bar bg-primary" style="width:70%"></div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>SQL</span>
+                    <span class="text-secondary">Básico-Intermediário</span>
+                  </div>
+                  <div class="progress" style="height:8px;">
+                    <div class="progress-bar bg-primary" style="width:50%"></div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>Python</span>
+                    <span class="text-secondary">Básico</span>
+                  </div>
+                  <div class="progress" style="height:8px;">
+                    <div class="progress-bar bg-primary" style="width:35%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>Power BI</span>
+                    <span class="text-secondary">Básico</span>
+                  </div>
+                  <div class="progress" style="height:8px;">
+                    <div class="progress-bar bg-primary" style="width:30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTERESSES ========== -->
+    <section id="interesses" class="py-4">
+      <div class="container">
+        <div class="mb-3">
+          <h2 class="h4 mb-1">Interesses</h2>
+          <p class="text-secondary mb-0">Áreas de interesse e hobbies.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="h6 mb-3">Áreas de interesse</h3>
+                <ul class="mb-0">
+                  <li>Análise e visualização de dados</li>
+                  <li>Inteligência artificial e machine learning</li>
+                  <li>Tecnologia e inovação</li>
+                  <li>Empoderamento feminino na tecnologia</li>
+                  <li>Suporte e experiência do usuário</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="h6 mb-2">Hobbies & Atividades</h3>
+                <p class="text-secondary small mb-3">O que faço fora dos estudos.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-bg-light border">
+                    <i class="fa-solid fa-dumbbell me-1"></i>Academia
+                  </span>
+                  <span class="badge text-bg-light border">
+                    <i class="fa-solid fa-plane me-1"></i>Viagens
+                  </span>
+                  <span class="badge text-bg-light border">
+                    <i class="fa-solid fa-people-group me-1"></i>Família
+                  </span>
+                  <span class="badge text-bg-light border">
+                    <i class="fa-solid fa-venus me-1"></i>Núcleo GIRLS
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contato" class="py-4">
+      <div class="container">
+        <div class="mb-3">
+          <h2 class="h4 mb-1">Contato</h2>
+          <p class="text-secondary mb-0">Como falar comigo.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex gap-2 align-items-center mb-3">
+                    <i class="fa-solid fa-envelope text-primary"></i>
+                    <a href="mailto:luanapxb@gmail.com" class="link-underline link-underline-opacity-0">luanapxb@gmail.com</a>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center">
+                    <i class="fa-brands fa-linkedin text-primary"></i>
+                    <a href="https://www.linkedin.com/in/luana-peixoto-borges/" target="_blank" class="link-underline link-underline-opacity-0">
+                      linkedin.com/in/luana-peixoto-borges
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="border-top py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <small class="text-secondary">© <span id="year"></span> Página Pessoal — Luana Peixoto Borges</small>
+      <small class="text-secondary">Feito com HTML + Bootstrap + CSS/JS</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS próprio -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

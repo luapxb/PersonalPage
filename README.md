@@ -12,14 +12,23 @@ Página pessoal desenvolvida com **HTML**, **CSS** e **JavaScript**, disponível
 
 ## 📁 Estrutura do Repositório
 personalPage/
+
 ├── bootstrap/
+
 │   ├── index.html
+
 │   ├── style.css
+
 │   └── script.js
+
 └── bulma/
-├── index.html
-├── style.css
-└── script.js
+
+  ├── index.html
+
+  ├── style.css
+
+  └── script.js
+
 
 ## 🛠️ Tecnologias Utilizadas
 

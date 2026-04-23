@@ -1,91 +1,51 @@
 // =============================================
-// TEMA CLARO / ESCURO
+// ANO NO RODAPÉ
 // =============================================
+document.getElementById('year').textContent = new Date().getFullYear();
 
-function toggleTheme() {
-  const html = document.documentElement;
-  const isDark = html.getAttribute('data-theme') === 'dark';
-  const newTheme = isDark ? 'light' : 'dark';
+// =============================================
+// NAVBAR BURGER (menu mobile — Bulma)
+// =============================================
+var burger = document.querySelector('.navbar-burger');
+var menu   = document.getElementById('navMenu');
 
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateThemeButton(newTheme);
+if (burger && menu) {
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
 }
 
-function updateThemeButton(theme) {
-  const icon  = document.getElementById('themeIcon');
-  const label = document.getElementById('themeLabel');
-  if (!icon || !label) return;
+// =============================================
+// TEMA CLARO / ESCURO
+// Usa data-theme no <html> + classes CSS
+// =============================================
+var root  = document.documentElement;
+var btn   = document.getElementById('themeToggle');
+var icon  = document.getElementById('themeIcon');
+var label = document.getElementById('themeLabel');
+
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
 
   if (theme === 'dark') {
-    icon.className = 'bi bi-sun';
+    icon.className    = 'fa-solid fa-sun';
     label.textContent = 'Claro';
   } else {
-    icon.className = 'bi bi-moon-stars';
+    icon.className    = 'fa-solid fa-moon';
     label.textContent = 'Escuro';
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+// Carrega preferência salva
+var savedTheme = localStorage.getItem('theme');
+applyTheme(savedTheme ? savedTheme : 'light');
 
-  // Aplica tema salvo
-  const saved = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', saved);
-  updateThemeButton(saved);
-
-  // Liga o botão de tema
-  const btn = document.getElementById('themeToggle');
-  if (btn) btn.addEventListener('click', toggleTheme);
-
-  // =============================================
-  // MENU BURGER — Bulma
-  // =============================================
-  const burger = document.getElementById('burgerBtn');
-  const menu   = document.getElementById('navMenu');
-
-  if (burger && menu) {
-    burger.addEventListener('click', function () {
-      burger.classList.toggle('is-active');
-      menu.classList.toggle('is-active');
-    });
-  }
-
-  // =============================================
-  // NAVBAR — some ao rolar para baixo, volta ao rolar para cima
-  // =============================================
-  const nav = document.getElementById('mainNav');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', function () {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll && currentScroll > 80) {
-      nav.classList.add('hidden');
-    } else {
-      nav.classList.remove('hidden');
-    }
-
-    lastScroll = currentScroll;
+// Evento de clique no botão
+if (btn) {
+  btn.addEventListener('click', function () {
+    var current = root.getAttribute('data-theme');
+    applyTheme(current === 'light' ? 'dark' : 'light');
   });
-
-  // =============================================
-  // ANIMAÇÕES AO ROLAR A PÁGINA
-  // =============================================
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry, i) {
-        if (entry.isIntersecting) {
-          setTimeout(function () {
-            entry.target.classList.add('visible');
-          }, i * 120);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll('.fade-in').forEach(function (el) {
-    observer.observe(el);
-  });
-
-});
+}
